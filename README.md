@@ -8,11 +8,13 @@
 ----------------------------------------------------------------
  *Installation: npm i
 
- *Usage:The Note Taker application can be utilized to write and save notes as well as delete them. It uses express on the backend to store notes in string format. The app can also retrieve notes and displays them to the user in JSON format for enhanced readability. 
+ *Usage:The Note Taker application uses express on the backend to store notes in string format. The app can also retrieve notes and displays them to the user in JSON format for enhanced readability. 
 
  *License: None
 
  *Test: node server.js or nodemon
+
+ *Functions: 
  ---------------------------------------------------------
  
 Which functions does the Note Taker have?
@@ -31,6 +33,6 @@ Which functions does the Note Taker have?
 
   * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means that each note has a unique `id` when it's saved. In order to delete a note, the app reads all notes from the `db.json` file, removes the note with the given `id` property, and then rewrites the notes to the `db.json` file.
 ---------------------------------------------------------
-#Made by LanChi Pham, &copy;Copyright 2020
+&copy;Copyright 2020
 ----------------------------------------------------------
   
