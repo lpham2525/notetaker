@@ -40,7 +40,7 @@ app.post("/api/notes", (req, res) => {
     .then((notesList) => {
       notesList = JSON.parse(notesList);
       notesList.push(newNote);
-      wf("./db/db.json", notesList);
+      wf("./db/db.json", JSON.stringify(notesList));
       res.json(notesList);
     })
     .catch((err) => console.error(err));
@@ -59,7 +59,7 @@ app.delete("/api/notes/:id", (req, res) => {
           notesList[i].id = i;
         }
       };
-      wf("./db/db.json", notesList)
+      wf("./db/db.json", JSON.stringify(notesList))
         .then(() => {
           res.send(notesList);
         })
