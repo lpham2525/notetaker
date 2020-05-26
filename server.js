@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const { join } = require("path");
 const app = express();
@@ -47,4 +48,6 @@ app.delete("/api/notes/:id", (req, res) => {
     .catch((err) => console.error(err));
 });
 
-app.listen(3000, () => console.log("http://localhost:3000"));
+app.listen(process.env.PORT || 3000, () => {
+  console.log("http://localhost:3000");
+});
